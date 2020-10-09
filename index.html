@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>Calculadora de Materiais </title>
+<style type="text/css">
+body {
+	margin: 30px;
+}
+</style> 
+</head>
+<script>
+	function calcularValores()
+	{
+        calcularLarguraComprimento();
+		calcularChapisco1();
+		calcularChapisco2();
+		calcularEmboco1();
+		calcularEmboco2();
+		calcularEmboco3();
+		calcularReboco1();
+		calcularReboco2();
+		calcularReboco3();
+		calcularContrapiso1();
+		calcularContrapiso2();
+		calcularAssentamento1();
+		calcularConcretoLaje61();
+		calcularConcretoLaje62();
+		calcularConcretoLaje63();
+		calcularConcretoLaje181();
+		calcularConcretoLaje182();
+		calcularConcretoLaje183();
+		calcularConcretoLaje601();
+		calcularConcretoLaje602();
+		calcularConcretoLaje603();
+		calcularAssTijolo1();
+		calcularAssTijolo2();
+		calcularAssTijolo3();
+		calcularAssTijoloLajota1();
+		calcularAssTijoloLajota2();
+		calcularAssTijoloLajota3();
+		calcularAssBloco1();
+		calcularAssBloco2();
+		calcularAssBloco3();
+		calcularAssBlocoVazado1();
+		calcularAssBlocoVazado2();
+		calcularAssBlocoVazado3();
+		calcularOutros1();
+		calcularOutros2();
+		calcularOutros3();
+		calcularOutros4();
+		calcularOutros5();
+		calcularOutros6();
+		calcularOutros7();
+	}
+</script>
+<body>
+<input type="hidden" value="1" id="numero1" />
+<input type="hidden" value="2" id="numero2" />
+<input type="hidden" value="4" id="numero4" />
+<input type="hidden" value="5" id="numero5" />
+<input type="hidden" value="8.33" id="numero833" />
+<input type="hidden" value="15" id="numero15" />
+<input type="hidden" value="16.66" id="numero1666" />
+<input type="hidden" value="166.6" id="numero16662" />
+<input type="hidden" value="30" id="numero30" />
+<input type="hidden" value="50" id="numero50" />
+<input type="hidden" value="90" id="numero90" />
+<input type="hidden" value="300" id="numero300" />
+<input type="hidden" value="0.5" id="numero05" />
+<input type="hidden" value="0.3" id="numero03" />
+<input type="hidden" value="10" id="numero10" />
+<input type="hidden" value="20" id="numero20" />
+<input type="hidden" value="500" id="numero500" />
+<input type="hidden" value="1000" id="numero1000" />
+<input type="hidden" value="750" id="numero750" />
+<input type="hidden" value="250" id="numero250" />
+<form>
+Largura : <input type="text" id="materialLargura" /><br>
+Comprimento: <input type="text" id="materialComprimento" /><br>
+<input type="button" onClick="calcularValores()" Value="Calcular" />
+</form>
+<p>Area : <br>
+<span id = "areaTotal"></span>
+<script>
+	function calcularLarguraComprimento()
+	{
+        num1 = Number(document.getElementById("materialLargura").value);
+        num2 = Number(document.getElementById("materialComprimento").value);
+        document.getElementById("areaTotal").innerHTML = num1 * num2;
+	}
+</script>
+<br>
+<h1>CHAPISCO</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento1"></span>
+<h4> Areia:</h4>
+<span id = "valorAreia1"></span>
+<script>
+	function calcularChapisco1()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero1").value;
+		document.getElementById("valorCimento1").innerHTML  = num3 * num4;
+	}
+	function calcularChapisco2()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero2").value;
+		document.getElementById("valorAreia1").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>EMBOÇO</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento2"></span>
+<h4>Cal:</h4>
+<span id = "valorAreia2"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia2"></span>
+<script>
+	function calcularEmboco1()
+	{
+		num7 = Number(document.getElementById("areaTotal").innerHTML);
+		num8 = document.getElementById("numero1").value;
+		document.getElementById("valorCimento2").innerHTML  = num7 * num8;
+	}
+	function calcularEmboco2()
+	{
+		num9 = Number(document.getElementById("areaTotal").innerHTML);
+		num10 = document.getElementById("numero2").value;
+		document.getElementById("valorAreia2").innerHTML  = num9 * num10;
+	}
+	function calcularEmboco3()
+	{
+		num11 = Number(document.getElementById("areaTotal").innerHTML);
+		num12 = document.getElementById("numero4").value;
+		document.getElementById("valorAreiaMedia2").innerHTML  = num11 * num12;
+	}
+</script>
+<h1>REBOCO</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento3"></span>
+<h4>Cal:</h4>
+<span id = "valorAreia3"></span>
+<h4>Areia Fina:</h4>
+<span id = "valorAreiaFina3"></span>
+<script>
+	function calcularReboco1()
+	{
+		num13 = Number(document.getElementById("areaTotal").innerHTML);
+		num14 = document.getElementById("numero1").value;
+		document.getElementById("valorCimento3").innerHTML  = num13 * num14;
+	}
+	function calcularReboco2()
+	{
+		num15 = Number(document.getElementById("areaTotal").innerHTML);
+		num16 = document.getElementById("numero2").value;
+		document.getElementById("valorAreia3").innerHTML  = num15 * num16;
+	}
+	function calcularReboco3()
+	{
+		num17 = Number(document.getElementById("areaTotal").innerHTML);
+		num18 = document.getElementById("numero4").value;
+		document.getElementById("valorAreiaFina3").innerHTML  = num17 * num18;
+	}
+</script>
+<h1>CONTRAPISO</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento4"></span>
+<h4>Cal:</h4>
+<span id = "valorAreia4"></span>
+<script>
+	function calcularContrapiso1()
+	{
+		num19 = Number(document.getElementById("areaTotal").innerHTML);
+		num20 = document.getElementById("numero833").value;
+		document.getElementById("valorCimento4").innerHTML  = num19 * num20;
+	}
+	function calcularContrapiso2()
+	{
+		num21 = Number(document.getElementById("areaTotal").innerHTML);
+		num22 = document.getElementById("numero15").value;
+		document.getElementById("valorAreia4").innerHTML  = num21 * num22;
+	}
+</script>
+<h1>ARGAMASSA DE ASSENTAMENTO</h1>
+<h4>Argamassa:</h4>
+<span id = "valorArgamassa5"></span>
+<script>
+	function calcularAssentamento1()
+	{
+		num23 = Number(document.getElementById("areaTotal").innerHTML);
+		num24 = document.getElementById("numero5").value;
+		document.getElementById("valorArgamassa5").innerHTML  = num23 * num24;
+	}
+</script>
+<h1>CONCRETO LAJE - 6CM</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento6"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia6"></span>
+<h4>B1:</h4>
+<span id = "valorB6"></span>
+<script>
+	function calcularConcretoLaje61()
+	{
+		num25 = Number(document.getElementById("areaTotal").innerHTML);
+		num26 = document.getElementById("numero1666").value;
+		document.getElementById("valorCimento6").innerHTML  = num25 * num26;
+	}
+	function calcularConcretoLaje62()
+	{
+		num27 = Number(document.getElementById("areaTotal").innerHTML);
+		num28 = document.getElementById("numero30").value;
+		document.getElementById("valorAreiaMedia6").innerHTML  = num27 * num28;
+	}
+	function calcularConcretoLaje63()
+	{
+		num29 = Number(document.getElementById("areaTotal").innerHTML);
+		num30 = document.getElementById("numero30").value;
+		document.getElementById("valorB6").innerHTML  = num29 * num30;
+	}
+</script>
+<h1>CONCRETO LAJE - 18CM - Maciça</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento7"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia7"></span>
+<h4>B1:</h4>
+<span id = "valorB7"></span>
+<script>
+	function calcularConcretoLaje181()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero50").value;
+		document.getElementById("valorCimento7").innerHTML  = num1 * num2;
+	}
+	function calcularConcretoLaje182()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero90").value;
+		document.getElementById("valorAreiaMedia7").innerHTML  = num3 * num4;
+	}
+	function calcularConcretoLaje183()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero90").value;
+		document.getElementById("valorB7").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>CONCRETO LAJE - 60CM - Radier</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento8"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia8"></span>
+<h4>B1:</h4>
+<span id = "valorB8"></span>
+<script>
+	function calcularConcretoLaje601()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero16662").value;
+		document.getElementById("valorCimento8").innerHTML  = num1 * num2;
+	}
+	function calcularConcretoLaje602()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero300").value;
+		document.getElementById("valorAreiaMedia8").innerHTML  = num3 * num4;
+	}
+	function calcularConcretoLaje603()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero300").value;
+		document.getElementById("valorB8").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>ASSENTAMENTO TIJOLO MACIÇO</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento9"></span>
+<h4>Cal:</h4>
+<span id = "valorCal9"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia9"></span>
+<script>
+	function calcularAssTijolo1()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero05").value;
+		document.getElementById("valorCimento9").innerHTML  = num1 * num2;
+	}
+	function calcularAssTijolo2()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero2").value;
+		document.getElementById("valorCal9").innerHTML  = num3 * num4;
+	}
+	function calcularAssTijolo3()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero4").value;
+		document.getElementById("valorAreiaMedia9").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>ASSENTAMENTO TIJOLO LAJOTA</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento10"></span>
+<h4>Cal:</h4>
+<span id = "valorCal10"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia10"></span>
+<script>
+	function calcularAssTijoloLajota1()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero1").value;
+		document.getElementById("valorCimento10").innerHTML  = num1 * num2;
+	}
+	function calcularAssTijoloLajota2()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero2").value;
+		document.getElementById("valorCal10").innerHTML  = num3 * num4;
+	}
+	function calcularAssTijoloLajota3()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero4").value;
+		document.getElementById("valorAreiaMedia10").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>ASSENTAMENTO BLOCO DE CONCRETO COM JUNTA</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento11"></span>
+<h4>Cal:</h4>
+<span id = "valorCal11"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia11"></span>
+<script>
+	function calcularAssBloco1()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero03").value;
+		document.getElementById("valorCimento11").innerHTML  = num1 * num2;
+	}
+	function calcularAssBloco2()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero05").value;
+		document.getElementById("valorCal11").innerHTML  = num3 * num4;
+	}
+	function calcularAssBloco3()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero1").value;
+		document.getElementById("valorAreiaMedia11").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>ASSENTAMENTO BLOCO DE CONCRETO VAZADO (JUNTA CONCRETADA)</h1>
+<h4>Cimento:</h4>
+<span id = "valorCimento12"></span>
+<h4>Cal:</h4>
+<span id = "valorCal12"></span>
+<h4>Areia Média:</h4>
+<span id = "valorAreiaMedia12"></span>
+<script>
+	function calcularAssBlocoVazado1()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero10").value;
+		document.getElementById("valorCimento12").innerHTML  = num1 * num2;
+	}
+	function calcularAssBlocoVazado2()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero20").value;
+		document.getElementById("valorCal12").innerHTML  = num3 * num4;
+	}
+	function calcularAssBlocoVazado3()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero20").value;
+		document.getElementById("valorAreiaMedia12").innerHTML  = num5 * num6;
+	}
+</script>
+<h1>OUTROS</h1>
+<h4>Massa Corrida, 2 demãos por unidade (kg):</h4>
+<span id = "valorOutros1"></span>
+<h4>Selador Acrílico para parede (ml):</h4>
+<span id = "valorOutros2"></span>
+<h4>Pintura Látex, 3 demãos (sem massa):</h4>
+<span id = "valorOutros3"></span>
+<h4>Pintura Esmalte Sintético, 2 demãos:</h4>
+<span id = "valorOutros4"></span>
+<h4>Pintura Verniz Acrílico para concreto, 2 demãos:</h4>
+<span id = "valorOutros5"></span>
+<h4>Pintura para madeira, 3 demãos:</h4>
+<span id = "valorOutros6"></span>
+<h4>Pintura interna - Textura acrílica, 2 demãos:</h4>
+<span id = "valorOutros7"></span>
+<script>
+	function calcularOutros1()
+	{
+		num1 = Number(document.getElementById("areaTotal").innerHTML);
+		num2 = document.getElementById("numero5").value;
+		document.getElementById("valorOutros1").innerHTML  = num1 * num2;
+	}
+	function calcularOutros2()
+	{
+		num3 = Number(document.getElementById("areaTotal").innerHTML);
+		num4 = document.getElementById("numero250").value;
+		document.getElementById("valorOutros2").innerHTML  = num3 * num4;
+	}
+	function calcularOutros3()
+	{
+		num5 = Number(document.getElementById("areaTotal").innerHTML);
+		num6 = document.getElementById("numero750").value;
+		document.getElementById("valorOutros3").innerHTML  = num5 * num6;
+	}
+	function calcularOutros4()
+	{
+		num7 = Number(document.getElementById("areaTotal").innerHTML);
+		num8 = document.getElementById("numero500").value;
+		document.getElementById("valorOutros4").innerHTML  = num7 * num8;
+	}
+	function calcularOutros5()
+	{
+		num9 = Number(document.getElementById("areaTotal").innerHTML);
+		num10 = document.getElementById("numero500").value;
+		document.getElementById("valorOutros5").innerHTML  = num9 * num10;
+	}
+	function calcularOutros6()
+	{
+		num11 = Number(document.getElementById("areaTotal").innerHTML);
+		num12 = document.getElementById("numero500").value;
+		document.getElementById("valorOutros6").innerHTML  = num11 * num12;
+	}
+	function calcularOutros7()
+	{
+		num13 = Number(document.getElementById("areaTotal").innerHTML);
+		num14 = document.getElementById("numero1000").value;
+		document.getElementById("valorOutros7").innerHTML  = num13 * num14;
+	}
+</script>
+<br>
+</p>
+</body>
+</html>
