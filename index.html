@@ -75,6 +75,7 @@ body {
 <input type="hidden" value="1000" id="numero1000" />
 <input type="hidden" value="750" id="numero750" />
 <input type="hidden" value="250" id="numero250" />
+<input type="hidden" value="1480" id="numero1480" />
 <form>
 Largura : <input type="text" id="materialLargura" /><br>
 Comprimento: <input type="text" id="materialComprimento" /><br>
@@ -94,20 +95,21 @@ Comprimento: <input type="text" id="materialComprimento" /><br>
 <h1>CHAPISCO</h1>
 <h4>Cimento:</h4>
 <span id = "valorCimento1"></span>
-<h4> Areia:</h4>
+<h4> Areia Média:</h4>
 <span id = "valorAreia1"></span>
 <script>
 	function calcularChapisco1()
 	{
 		num3 = Number(document.getElementById("areaTotal").innerHTML);
 		num4 = document.getElementById("numero1").value;
+		num44 = document.getElementbyId("numero1480").value;
 		document.getElementById("valorCimento1").innerHTML  = num3 * num4;
 	}
 	function calcularChapisco2()
 	{
 		num5 = Number(document.getElementById("areaTotal").innerHTML);
 		num6 = document.getElementById("numero2").value;
-		document.getElementById("valorAreia1").innerHTML  = num5 * num6;
+		document.getElementById("valorAreia1").innerHTML  = (num5 * num6) / num44;
 	}
 </script>
 <h1>EMBOÇO</h1>
