@@ -75,12 +75,13 @@ body {
 <input type="hidden" value="1000" id="numero1000" />
 <input type="hidden" value="750" id="numero750" />
 <input type="hidden" value="250" id="numero250" />
+<h3>O valor deve ser inserido em metros e com PONTO (não vírgula) nas casas decimais.</h3>
 <form>
-Largura : <input type="text" id="materialLargura" /><br>
+Largura: <input type="text" id="materialLargura" /><br>
 Comprimento: <input type="text" id="materialComprimento" /><br>
 <input type="button" onClick="calcularValores()" Value="Calcular" />
 </form>
-<p>Area : <br>
+<p>Área (em metros): <br>
 <span id = "areaTotal"></span>
 <script>
 	function calcularLarguraComprimento()
